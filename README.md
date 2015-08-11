@@ -4,7 +4,7 @@ List of helpful libraries and functions I use for sharepoint
 
 Big thanks to:
   
-  Mark Rackley (SharePoing Hillbilly) for creating this awesome script. Allows for great custom forms
+  Mark Rackley (SharePoint Hillbilly) for creating this awesome script. Allows for great custom forms
     http://www.markrackley.net/2013/08/29/easy-custom-layouts-for-default-sharepoint-forms/
   
   Jquery and .Validate plugin
