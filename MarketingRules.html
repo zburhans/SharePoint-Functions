@@ -1,0 +1,27 @@
+<script src="/sales/SiteAssets/scripts/jquery-1.11.1.min.js"></script>
+<script src="/sales/SiteAssets/scripts/sputility.min.js"></script>
+
+<script>
+$(document).ready(function () { 
+	// Get a single select dropdown field 
+	var EventTypeField = SPUtility.GetSPField('Event Type'); 
+
+	// create a function to show or hide Product 1 based on Type's value
+	var showOrHideField = function() { 
+		var EventTypeFieldValue = EventTypeField.GetValue(); 
+		// Hide the Product 1 field if the selected value is New Event 
+		if(countryFieldValue === 'New Event') { 
+			SPUtility.HideSPField('Product 1'); 
+			SPUtility.HideSPField('Product 2'); 
+		}
+		else { 
+			SPUtility.ShowSPField('Product 1');
+			SPUtility.ShowSPField('Product 2');
+		} 
+	}; 
+	// run at startup (for edit form) 
+	showOrHideField(); 
+	// make sure if the user changes the value we handle it 
+	$(EventTypeField.Dropdown).on('change', showOrHideField); 
+}); ​
+</script>​​
